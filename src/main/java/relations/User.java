@@ -1,4 +1,4 @@
-package Relations;
+package relations;
 
 import lombok.*;
 
