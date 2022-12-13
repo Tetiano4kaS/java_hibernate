@@ -24,13 +24,10 @@ public class Main {
         Session session = sessionFactory.openSession();
 
         session.beginTransaction();
-        Passport ff = new Passport("ff", "347865");
-        Passport vv = new Passport("vv", "348788");
-        Passport cc = new Passport("cc", "568943");
 
-        session.save(new User("vasya", "pupkin",ff));
-        session.save(new User("kolya", "smetana",vv));
-        session.save(new User("magda", "kwiatkowska",cc));
+        session.save(new User("vasya", "pupkin", new Passport("ff", "347865")));
+        session.save(new User("kolya", "smetana",new Passport("vv", "348788")));
+        session.save(new User("magda", "kwiatkowska",new Passport("cc", "568943")));
 
         session.getTransaction().commit();
        User user = session.find(User.class, 2);
