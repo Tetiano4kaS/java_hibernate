@@ -1,4 +1,4 @@
-package Relations;
+package relations;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -6,6 +6,7 @@ import org.hibernate.boot.Metadata;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -16,22 +17,26 @@ public class Main {
 
         Metadata metadata =
                 new MetadataSources(serviceRegistry)
-                        .addAnnotatedClass(User.class) /*!!!!!!! register class*/
-                        .addAnnotatedClass(Passport.class)
+                        .addAnnotatedClass(Driver.class)
+                        .addAnnotatedClass(Car.class)
+                        .addAnnotatedClass(Vinkod.class)/*!!!!!!! register class*/
                         .getMetadataBuilder()
                         .build();
         SessionFactory sessionFactory = metadata.getSessionFactoryBuilder().build();
         Session session = sessionFactory.openSession();
 
         session.beginTransaction();
+        Car lzk1809kz = new Car("lzk1809kz");
+        Car lfz1234l = new Car("lfz1234l");
 
-        session.save(new User("vasya", "pupkin", new Passport("ff", "347865")));
-        session.save(new User("kolya", "smetana",new Passport("vv", "348788")));
-        session.save(new User("magda", "kwiatkowska",new Passport("cc", "568943")));
+        Driver driver = new Driver("Magda",lzk1809kz);
+        Driver driver1 = new Driver("Karolina",lfz1234l);
+        Driver driver2 = new Driver("Stefan",lfz1234l);
 
+        session.save(driver);
+        session.save(driver1);
+        session.save(driver2);
         session.getTransaction().commit();
-       User user = session.find(User.class, 2);
-        System.out.println(user);
 
 
         session.close();

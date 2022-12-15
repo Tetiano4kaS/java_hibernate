@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="562a22e0-0c1a-4ee9-bc39-e38f5c50f09d" name="Changes" comment="add">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Relations/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Relations/Main.java" afterDir="false" />
+    <list default="true" id="562a22e0-0c1a-4ee9-bc39-e38f5c50f09d" name="Changes" comment="add oto bid">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Relations/Driver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/relations/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/relations/Vinkod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Relations/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/relations/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Relations/Passport.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Relations/User.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="rel_oto_bid" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -59,7 +66,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Application.Relations.Main">
+  <component name="RunManager" selected="Application.relations.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="java_hibernate" />
@@ -67,12 +74,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Relations.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Relations.Main" />
+    <configuration name="relations.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="relations.Main" />
       <module name="java_hibernate" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Relations.*" />
+          <option name="PATTERN" value="relations.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -82,7 +89,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Relations.Main" />
+        <item itemvalue="Application.relations.Main" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -97,7 +104,9 @@
       <updated>1670500897351</updated>
       <workItem from="1670500899927" duration="1573000" />
       <workItem from="1670701724220" duration="2960000" />
-      <workItem from="1670934112433" duration="328000" />
+      <workItem from="1670934112433" duration="792000" />
+      <workItem from="1671046165235" duration="3794000" />
+      <workItem from="1671098653094" duration="2146000" />
     </task>
     <task id="LOCAL-00001" summary="add master">
       <created>1670501951027</created>
@@ -120,7 +129,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670934227701</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add oto ud">
+      <created>1670934472390</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670934472390</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add oto bid">
+      <created>1670934792573</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670934792573</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +175,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add master" />
     <MESSAGE value="add" />
-    <option name="LAST_COMMIT_MESSAGE" value="add" />
+    <MESSAGE value="add oto ud" />
+    <MESSAGE value="add oto bid" />
+    <option name="LAST_COMMIT_MESSAGE" value="add oto bid" />
   </component>
 </project>
