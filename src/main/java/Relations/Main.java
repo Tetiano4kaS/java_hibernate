@@ -7,6 +7,8 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         StandardServiceRegistry serviceRegistry =
@@ -16,8 +18,8 @@ public class Main {
 
         Metadata metadata =
                 new MetadataSources(serviceRegistry)
-                        .addAnnotatedClass(User.class) /*!!!!!!! register class*/
-                        .addAnnotatedClass(Passport.class)
+                        .addAnnotatedClass(Car.class) /*!!!!!!! register class*/
+                        .addAnnotatedClass(Fuel.class)
                         .getMetadataBuilder()
                         .build();
         SessionFactory sessionFactory = metadata.getSessionFactoryBuilder().build();
@@ -25,13 +27,11 @@ public class Main {
 
         session.beginTransaction();
 
-        session.save(new User("vasya", "pupkin", new Passport("ff", "347865")));
-        session.save(new User("kolya", "smetana",new Passport("vv", "348788")));
-        session.save(new User("magda", "kwiatkowska",new Passport("cc", "568943")));
+        session.save((new Fuel("gas", Arrays.asList(new Car("234567890234"), new Car("0987654"),
+                new Car("765323469")))));
+        session.save(new Fuel("petrol", Arrays.asList(new Car("7985323456"), new Car("9735456380486"))));
 
         session.getTransaction().commit();
-       User user = session.find(User.class, 2);
-        System.out.println(user);
 
 
         session.close();
