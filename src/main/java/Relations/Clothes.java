@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.ManyToAny;
 
 import javax.persistence.*;
 import java.util.List;
@@ -13,23 +14,23 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-public class User {
+public class Clothes {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String name;
+    private String tShirtName;
     @ManyToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     @JoinTable(name="user_clothes",
-    joinColumns = @JoinColumn(name="user_id"),
-    inverseJoinColumns = @JoinColumn(name="clothes_id"))
-    private List<Clothes> clothes;
+    joinColumns = @JoinColumn(name = "clothes_id"),
+    inverseJoinColumns = @JoinColumn(name = "user_id"))
+    private List<User> user;
 
-    public User(String name, List<Clothes> clothes) {
-        this.name = name;
-        this.clothes = clothes;
+    public Clothes(String tShirtName, List<User> user) {
+        this.tShirtName = tShirtName;
+        this.user = user;
     }
 
-    public User(String name) {
-        this.name = name;
+    public Clothes(String tShirtName) {
+        this.tShirtName = tShirtName;
     }
 }
